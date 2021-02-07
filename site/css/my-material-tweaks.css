@@ -1,0 +1,71 @@
+.md-tabs__item {
+  height: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+.md-tabs__list {
+  display: contents;
+  margin-top: .1rem;
+}
+a.md-tabs__link {
+  margin-top: .1rem;
+}
+
+a.material-anchor {
+  margin-top: -2.4rem;
+  padding-top: 2.4rem;
+}
+
+.md-typeset table:not([class]) th {
+  min-width: 2.6rem;
+}
+
+/*
+ * Zoom pictures with tabindex="0"
+ */
+img[tabindex="0"] {
+  cursor: zoom-in; 
+}
+img[tabindex="0"]:focus {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  max-width: 99%;
+  max-height: 99%;
+  margin: auto;
+  box-shadow: 0 0 20px #000, 0 0 0 1000px rgba(210,210,210,.4);
+}
+img[tabindex="0"]:focus,  /* убрать строку, если не нужно, чтобы при клике на увеличенное фото, оно возвращалось в исходное состояние */
+img[tabindex="0"]:focus ~ * {
+  pointer-events: none; 
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  width: 24px; /*Cut long name of icon till 1 char*/
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
