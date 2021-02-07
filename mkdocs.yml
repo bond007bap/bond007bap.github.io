@@ -1,0 +1,40 @@
+site_name: Основные принципы Unicode
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'Grey'
+    accent: 'Green'
+  favicon: 'images/favicon.png'
+  language: 'ru'
+  feature:
+    tabs: true
+#  logo: 'images/favicon.png'
+  support: 'images/support.png'
+
+extra_css:
+  - 'css/my-material-tweaks.css'
+
+
+#pages:
+
+nav:
+
+#    - Основные принципы Unicode: 'osnovnye_principy_unicode.md'
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - meta
+  - codehilite:
+      guess_lang: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys:
+       camel_case: true
+       strict: false
+  - toc:
+      permalink: true
+#  - mdx_inline_graphviz
+ 
