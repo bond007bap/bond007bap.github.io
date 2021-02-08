@@ -1,4 +1,4 @@
-site_name: Основные принципы Unicode
+site_name: Unicode
 
 theme:
   name: 'material'
@@ -10,24 +10,33 @@ theme:
   feature:
     tabs: true
 #  logo: 'images/favicon.png'
-  support: 'images/support.png'
+#  support: 'images/support.png'
 
 extra_css:
   - 'css/my-material-tweaks.css'
 
+plugins:
+  - macros
 
-#pages:
+extra:
+  c:
+    Green: style="color:#008000;background-color:#FFFFFF"
+    Red: style="color:#FF0000;background-color:#FFFFFF"
+
+#pages: Depricated!
 
 nav:
 
-#    - Основные принципы Unicode: 'osnovnye_principy_unicode.md'
+    - Основы Юникода: 'index.md'
 
 markdown_extensions:
   - admonition
   - attr_list
   - meta
-  - codehilite:
-      guess_lang: true
+#  - codehilite:
+#      guess_lang: true
+#  - pymdownx.highlight:
+#      linenums: true
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
@@ -36,5 +45,4 @@ markdown_extensions:
        strict: false
   - toc:
       permalink: true
-#  - mdx_inline_graphviz
- 
+#  - mdx_inline_graphviz 
