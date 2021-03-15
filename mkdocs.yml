@@ -1,0 +1,71 @@
+site_name: Unicode
+
+theme:
+  name: 'material'
+  palette:
+    primary: 'Grey'
+    accent: 'Green'
+  favicon: 'images/favicon.png'
+  language: 'ru'
+  feature:
+    tabs: true
+  logo: 'images/favicon.png'
+  fonts: 'Material+Icons'
+# В C:\Python37\Lib\site-packages\material\base.html
+# после         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{
+#            font.text | replace(' ', '+') + ':300,400,400i,700%7C' +
+#            font.code | replace(' ', '+')
+#          }}&display=fallback">
+# добавить строки 
+#         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+#       rel="stylesheet">
+#  font: 'Material+Icons'
+# В C:\Python37\Lib\site-packages\material\partials\header.html
+# после         
+#      {% include "partials/logo.html" %}
+#    </a>
+# добавить строку
+#    <a href="http://servicedesk.itapteka.ru/servicedesk/customer/portal/5/create/277/" title="" target="_blank"><img class="material-icons" src="/images/icons/headset-white.svg" ></a>
+
+plugins:
+  - search:
+      lang:
+        - en
+        - ru
+#      prebuild_index: true  # большой объём файла search.json
+
+extra_css:
+  - 'css/my-material-tweaks.css'
+
+
+extra:
+  c:
+    Green: style="color:#008000;background-color:#FFFFFF"
+    Red: style="color:#FF0000;background-color:#FFFFFF"
+
+#pages: Depricated!
+
+nav:
+
+    - Основы Юникода : 'index.md'
+
+markdown_extensions:
+  - abbr
+#*[АББРЕВИАТУРА]: Расшифровка аббревиатуры.
+  - admonition
+  - attr_list
+  - meta
+#  - codehilite:
+#      guess_lang: true
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.keys:
+       camel_case: true
+       strict: false
+  - toc:
+      permalink: true
+#  - mdx_inline_graphviz
+ 
